@@ -5,15 +5,19 @@ public class FileStorage {
 
     public void saveFile(String sourcePath, String destPath) throws IOException {
 
-        Path targetPath = Paths.get(destPath);
+        Path source = Paths.get(sourcePath);
+        Path target = Paths.get(destPath);
 
-        // create parent folder (IMPORTANT FIX)
-        Files.createDirectories(targetPath.getParent());
+        // create only storage folder
+        Files.createDirectories(target.getParent());
+
+        System.out.println("SOURCE: " + source);
+        System.out.println("TARGET: " + target);
 
         Files.copy(
-            Paths.get(sourcePath),
-            targetPath,
-            StandardCopyOption.REPLACE_EXISTING
+                source,
+                target,
+                StandardCopyOption.REPLACE_EXISTING
         );
     }
 }
