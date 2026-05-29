@@ -4,16 +4,19 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        DiffManager diff =
+        new DiffManager();
         VersionManager vm = new VersionManager();
         Scanner sc = new Scanner(System.in);
 
         while (true) {
 
             System.out.println("\n===== MINI VERSION CONTROL SYSTEM =====");
-            System.out.println("1. Commit File");
+System.out.println("1. Commit File");
 System.out.println("2. Show History");
 System.out.println("3. Restore Version");
-System.out.println("4. Exit");
+System.out.println("4. Compare Versions");
+System.out.println("5. Exit");
 
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
@@ -50,7 +53,18 @@ case 1:
     vm.restore(v, target);
 
     break;
-                case 4:
+    case 4:
+
+    System.out.print("Enter first version: ");
+    int first = sc.nextInt();
+
+    System.out.print("Enter second version: ");
+    int second = sc.nextInt();
+
+    diff.compareVersions(first, second);
+
+    break;
+                case 5:
                     System.out.println("Exiting...");
                     System.exit(0);
 
