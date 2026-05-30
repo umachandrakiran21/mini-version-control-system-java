@@ -65,7 +65,23 @@ VCS-Lite
 │
 └── README.md
 ```
+## Screenshots
 
+### Commit
+
+![Commit](screenshots/commit.png)
+
+### History
+
+![History](screenshots/history.png)
+
+### Restore
+
+![Restore](screenshots/restore.png)
+
+### Diff
+
+![Diff](screenshots/diff.png)
 ---
 
 ## Learning Outcomes
