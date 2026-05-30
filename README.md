@@ -81,7 +81,7 @@ VCS-Lite
 
 ### Diff
 
-![Diff](screenshots/differ.png)
+![Diff](sreenshots/differ.png)
 ---
 
 ## Learning Outcomes
