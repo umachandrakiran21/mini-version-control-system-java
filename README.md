@@ -69,7 +69,7 @@ VCS-Lite
 
 ### Commit
 
-![Commit](screenshots/commit.png)
+![Commit](sreenshots/commit.png)
 
 ### History
 
