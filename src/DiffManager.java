@@ -17,7 +17,16 @@ public class DiffManager {
         String file2 =
                 baseDir + "\\..\\storage\\v"
                         + v2 + ".txt";
+                        
+                        Path path1 = Paths.get(file1);
+Path path2 = Paths.get(file2);
 
+if (!Files.exists(path1) || !Files.exists(path2)) {
+
+    System.out.println("❌ Version not found!");
+
+    return;
+}
         // READ BOTH FILES
         List<String> lines1 =
                 Files.readAllLines(Paths.get(file1));

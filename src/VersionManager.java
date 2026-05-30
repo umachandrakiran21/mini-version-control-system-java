@@ -27,9 +27,18 @@ public class VersionManager {
         System.out.println("Existing Versions = " + version);
     }
 
+    
     // COMMIT FUNCTION
     public void commit(String filePath, String message) throws IOException {
 
+        Path source = Paths.get(filePath);
+
+if (!Files.exists(source)) {
+
+    System.out.println("❌ File not found!");
+
+    return;
+}
         System.out.println("Current Version Before Increment = " + version);
 
         version++;
@@ -54,24 +63,10 @@ public class VersionManager {
     }
 
     // SHOW HISTORY
-    public void showHistory() {
+  public void showHistory() throws IOException {
 
-        if (history.isEmpty()) {
-
-            System.out.println("No commits yet!");
-
-            return;
-        }
-
-        for (Version v : history) {
-
-            System.out.println(
-                    "v" + v.versionNumber +
-                    " | " + v.message +
-                    " | " + v.timestamp
-            );
-        }
-    }
+    historyManager.showHistory();
+}
 
     // RESTORE VERSION
     public void restore(int versionNumber,

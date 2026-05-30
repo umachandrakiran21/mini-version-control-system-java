@@ -32,7 +32,15 @@ case 1:
     System.out.print("Enter commit message: ");
     String msg = sc.nextLine().trim();
 
+   try {
+
     vm.commit(path, msg);
+
+} catch (Exception e) {
+
+    System.out.println("❌ Error: " + e.getMessage());
+
+}
 
     break;
 
@@ -50,7 +58,15 @@ case 1:
     System.out.print("Enter target file path: ");
     String target = sc.nextLine().trim();
 
+    try {
+
     vm.restore(v, target);
+
+} catch (Exception e) {
+
+    System.out.println("❌ Error: " + e.getMessage());
+
+}
 
     break;
     case 4:
