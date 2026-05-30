@@ -1,2 +1,2 @@
 Hello Version 1
-Java Project
+Java Projects
