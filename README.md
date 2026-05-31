@@ -69,7 +69,7 @@ VCS-Lite
 
 ### Commit
 
-![Commit](sreenshots/commit.png)
+![Commit](screenshots/commit.png)
 
 ### History
 
@@ -81,7 +81,7 @@ VCS-Lite
 
 ### Diff
 
-![Diff](sreenshots/differ.png)
+![Diff](screenshots/differ.png)
 ---
 
 ## Learning Outcomes
